@@ -1,7 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app is still under development as an exercise for my CareerFoundry course. Once the app is finished, then I will be able to provide instructions to it. - Ioana Urse
 
 Things you may want to cover:
 
