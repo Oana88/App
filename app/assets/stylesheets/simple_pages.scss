@@ -1,3 +1,44 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.navbar-brand {
+    font-family:TimesNewRoman, serif;
+    color:white !important;
+    font-weight:bold;
+    font-size:25px;
+}
+
+.nav-link {
+    font-family:TimesNewRoman, serif;
+    color:white !important;
+    font-weight:bold;
+    font-size:20px;
+}
+
+h1 {
+    font-family:TimesNewRoman, serif;
+    color:blue;
+    text-align:center;
+    padding-top:50px
+}
+
+h2 {
+    font-family:TimesNewRoman, serif;
+    font-size:20px;
+    color:black;
+    text-align:center;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: lightgrey;
+    color: black;
+    text-align: center;
+    font-family:TimesNewRoman, serif;
+    font-weight:bold;
+    font-size:15px;
+}
