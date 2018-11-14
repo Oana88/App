@@ -9,11 +9,22 @@
     font-size:25px;
 }
 
-.nav-link {
+.nav-item {
     font-family:TimesNewRoman, serif;
-    color:white !important;
+    color:white;
     font-weight:bold;
     font-size:20px;
+    text-decoration: none;
+}
+
+.nav-item :hover {
+    color:white;
+    text-decoration:none;
+}
+
+a {
+    color:white;
+    padding-left:15px;
 }
 
 h1 {
@@ -30,6 +41,19 @@ h2 {
     text-align:center;
 }
 
+.row {
+    margin-left:0;
+    margin-right:0;
+}
+
+.image {
+    width: 60%;
+    vertical-align:middle;
+    padding-left:50px;
+    padding-top:30px;
+}
+
+
 footer {
     position: fixed;
     left: 0;
@@ -42,3 +66,4 @@ footer {
     font-weight:bold;
     font-size:15px;
 }
+
