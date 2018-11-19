@@ -1,16 +1,19 @@
-// Place all the styles related to the simple_pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+//General CSS//
+
+body {
+    background-color:#eaeaea;
+}
+
 
 .navbar-brand {
-    font-family:TimesNewRoman, serif;
+    font-family:Niramit, TimesNewRoman, serif;
     color:white !important;
     font-weight:bold;
     font-size:25px;
 }
 
 .nav-item {
-    font-family:TimesNewRoman, serif;
+    font-family:Niramit, TimesNewRoman, serif;
     color:white;
     font-weight:bold;
     font-size:20px;
@@ -28,14 +31,14 @@ a {
 }
 
 h1 {
-    font-family:TimesNewRoman, serif;
+    font-family:Niramit, TimesNewRoman, serif;
     color:blue;
     text-align:center;
     padding-top:50px
 }
 
 h2 {
-    font-family:TimesNewRoman, serif;
+    font-family:Niramit, TimesNewRoman, serif;
     font-size:20px;
     color:black;
     text-align:center;
@@ -47,9 +50,9 @@ h2 {
 }
 
 .image {
-    width: 60%;
+    width: 100%;
     vertical-align:middle;
-    padding-left:50px;
+    padding-left:20px;
     padding-top:30px;
 }
 
@@ -62,8 +65,48 @@ footer {
     background-color: lightgrey;
     color: black;
     text-align: center;
-    font-family:TimesNewRoman, serif;
+    font-family:Niramit, TimesNewRoman, serif;
     font-weight:bold;
     font-size:15px;
+}
+
+//Page specific CSS//
+
+//Contact page//
+
+.motto {
+    text-align:center;
+    font-family:Niramit, TimesNewRoman, serif;
+    font-size:2em;
+    font-style:italic;
+    margin-top:40px;
+}
+
+.contact-text {
+    text-align:left;
+    font-family:Niramit, TimesNewRoman, serif;
+    font-size:1.5em;
+    margin-top:40px;
+}
+
+.address {
+    text-align:left;
+    font-family:Niramit,TimesNewRoman, serif;
+    font-size:1.5em;
+    font-weight:600;
+}
+.form-control {
+    width:100%;
+}
+
+.message-box {
+    width:100%;
+    font-size:1rem;
+}
+
+label {
+    font-family:Niramit, TimesNewRoman, serif;
+    font-size:1.5em;
+    font-weight:600;
 }
 

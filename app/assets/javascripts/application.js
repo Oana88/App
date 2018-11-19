@@ -14,4 +14,13 @@
 //= require activestorage
 //= require turbolinks
 //= require jquery3
+//= require owl.carousel
 //= require_tree .
+
+document.addEventListener("turbolinks:load", function() {
+   $(".owl-carousel").owlCarousel({
+    margin:10,
+    loop:true,
+    nav:true
+   });
+});
