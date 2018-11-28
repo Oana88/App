@@ -9,8 +9,31 @@
 
 <p class="contact-text">Or you can use the below contact form in order to send us an e-mail.</p><br>
 
+<%= flash[:notice] %>
 
-<form id="contact-form">
+<%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
+<div class="row">
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
+  </div>
+  <br>
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+  </div>
+  <br>
+  <div class="form-group">
+    <%= form.label :message %>
+    <%= form.text_area :message, class: "form-control", placeholder: "Enter Message", rows: 5 %>
+  </div>
+  <br>
+</div>
+<%= form.submit "Send", class: "form_label" %>
+<% end %>
+
+
+<!--<form id="contact-form">
     <label for="text">Name*</label>
     <input type="text" name="text" id="text" class="form-control" placeholder="Enter your name." title="e.g. John Smith" required>
     <br>
@@ -24,6 +47,6 @@
     <textarea style="resize:none" name="message-box" id="message-box" cols="50" rows="10" class="message-box" placeholder="Your message here." required></textarea>
     <br>
     <button type="button" class="btn btn-success" id="button">Submit</button>
-</form>
+</form>-->
 
 
