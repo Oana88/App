@@ -30,7 +30,7 @@ body {
 }
 
 a {
-    color:white;
+    color:black;
     padding-left:15px;
 }
 
@@ -61,7 +61,7 @@ h2 {
 }
 
 footer {
-    position: fixed;
+    position: initial;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -101,6 +101,7 @@ img {
     font-family:Niramit, TimesNewRoman, serif;
     font-size:1.5em;
     margin-top:40px;
+    margin-left:40px;
 }
 
 .address {
@@ -108,9 +109,12 @@ img {
     font-family:Niramit,TimesNewRoman, serif;
     font-size:1.5em;
     font-weight:600;
+    margin-left:40px;
 }
-.form-control {
+.form-group {
     width:100%;
+    margin-left:40px;
+    margin-right:40px;
 }
 
 .message-box {
@@ -122,5 +126,13 @@ label {
     font-family:Niramit, TimesNewRoman, serif;
     font-size:1.5em;
     font-weight:600;
+}
+
+.btn {
+    font-family:Niramit, TimesNewRoman, serif;
+    font-size:1.5em;
+    font-weight:600;
+    margin-left:40px;
+    margin-top:0;
 }
 

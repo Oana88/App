@@ -11,7 +11,7 @@ class SimplePagesController < ApplicationController
     @name = params[:name]
     @email = params[:email]
     @message = params[:message]
-    ActionMailer::Base.mail(from: @email, to: 'oana.mirona@yahoo.ro', subject: "A new contact form message from #{@name}", body: @message).deliver_now
+    ActionMailer::Base.mail(from: @email, to: 'diabolyca1988@gmail.com', subject: "A new contact form message from #{@name}", body: @message).deliver_now
   end
 
 
