@@ -67,3 +67,5 @@ gem 'jquery-rails'
 gem 'owlcarousel-rails'
 
 gem 'devise'
+
+gem 'cancancan', '~> 2.0'
