@@ -27,7 +27,9 @@
     </div>
 </div>
 
-<%= @product.highest_rating_comment %>
+<% if @product.comments.length > 0 %>
+  <%= @product.highest_rating_comment.body %>
+<% end %>
 
 <%= link_to 'Edit', edit_product_path(@product) %> 
 <%= link_to 'Delete', @product, method: :delete, data: { confirm: 'Are you sure?' } %>
