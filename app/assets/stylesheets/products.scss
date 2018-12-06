@@ -61,15 +61,19 @@ h4 {
     width:8%;
 }
 
+ a>.btn destroy {
+    font-size:2em;
+}
+
 .digg_pagination {
   background: white;
   cursor: default;
   }
 
-  a, span, em {
+ a, span, em {
     padding: 0.2em 0.5em;
-    display: block;
-    float: left;
+    display: table-row;
+    float: right;
     margin-right: 1px;
     }
 
