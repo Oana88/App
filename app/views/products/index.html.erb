@@ -12,7 +12,7 @@
 
 <br>
 
-<div>
+<div class="container-editing-links">
 <% if signed_in? && current_user.admin? %>
 <%= link_to 'New Product', new_product_path, class: "btn btn-outline-dark btn-sm" %>
 <% end %>

@@ -1,7 +1,15 @@
 //General CSS//
 
+//* {border:2px solid red}//
+
+html {
+    min-height:100%;
+}
+
 body {
     background-color:#eaeaea;
+    min-height:100%;
+    width:100%;
 }
 
 
@@ -27,11 +35,16 @@ body {
 
 .btn {
     margin-left:15px;
+    float:right;
 }
 
 a {
     color:black;
     padding-left:15px;
+}
+
+a:hover {
+    color:black;
 }
 
 h1 {
@@ -48,6 +61,13 @@ h2 {
     text-align:center;
 }
 
+.owl-nav {
+    text-align:center;
+    font-size:2em;
+    font-weight:bolder;
+    zoom:200%;
+}
+
 .row {
     margin-left:0;
     margin-right:0;
@@ -61,7 +81,9 @@ h2 {
 }
 
 footer {
-    position: initial;
+    display:block;
+    position: fixed;
+    height:20px;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -136,5 +158,12 @@ label {
     margin-top:0;
 }
 
+.contact-button {
+    padding-bottom:30px;
+}
 
+//Registration pages //
 
+.login {
+    float: none;
+}

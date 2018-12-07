@@ -1,43 +1,46 @@
 <!--<p id="notice"><%#= notice %></p>-->
 
 <div class="row">
-    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-      <%= image_tag(@product.image_url, class: "img-thumbnail mx-auto d-block") %>
-    </div>
-    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-      <p>
-        <strong><%= @product.name %></strong>
-      </p>
+  <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+    <%= image_tag(@product.image_url, class: "img-thumbnail mx-auto d-block") %>
+  </div>
+  <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+    <p>
+      <strong><%= @product.name %></strong>
+    </p>
 
-      <p>
-        <strong><%= @product.description %></strong>
-      </p>
+    <p>
+      <strong><%= @product.description %></strong>
+    </p>
 
-      <p>
-        <strong>Colour:</strong>
-        <%= @product.colour %>
-      </p>
+    <p>
+      <strong>Colour:</strong>
+      <%= @product.colour %>
+    </p>
 
-      <p>
-        <strong>Price: <%= @product.price %>€</strong>
-      </p>
-      <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
-    </div>
-    <% if @product.comments.length > 0 %>
-    <%#= @product.highest_rating_comment.body %>
-    <% end %>
+    <p>
+      <strong>Price: <%= @product.price %>€</strong>
+    </p>
+
+    <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
+  </div>
+
+  <% if @product.comments.length > 0 %>
+  <%#= @product.highest_rating_comment.body %>
+  <% end %>
 </div>
-
 
 
 <%= render "new_comment" %>
 <%= render 'comments' %>
 
+<div class="container-editing-links">
 <% if signed_in? && current_user.admin? %>
 <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-outline-dark btn-sm" %> 
 <%= link_to 'Delete', @product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-dark btn-sm" %>
 <% end %>
 
 <%= link_to 'Back', products_path, class: "btn btn-outline-dark btn-sm" %>
+</div>
 <%= will_paginate @comments %>
 

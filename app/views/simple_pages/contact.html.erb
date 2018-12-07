@@ -28,9 +28,11 @@
     <%= form.text_area :message, class: "form-control", placeholder: "Enter Message", rows: 5 %>
   </div>
   <br>
+  <div class="contact-button">
+    <%= form.submit "Send", class: "btn btn-success btn-sm submit" %>
+    <% end %>
+  </div>
 </div>
-<%= form.submit "Send", class: "btn btn-success btn-sm" %>
-<% end %>
 
 
 
