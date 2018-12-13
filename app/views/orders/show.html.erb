@@ -1,0 +1,11 @@
+<div class="container-order">
+    <h2 class="order-title">Order Information</h2>
+    <strong class="order-info">Order ID: <%= @order.id %></strong>
+    <strong class="order-info">Product Name: <%= @order.product.name %></strong>
+    <strong class="order-info">Product Price: <%= number_to_currency (@order.product.price/100.to_f) %></strong>
+    <strong class="order-info">Total Price: <%= number_to_currency(@order.total/100.to_f) %></strong>
+</div>
+
+<% if signed_in? %>
+<%= link_to 'Back', orders_path, class: "btn btn-outline-dark btn-sm" %>
+<% end %>

@@ -1,0 +1,13 @@
+<h1>Orders</h1>
+
+<div class="row">
+    <% @orders.each do |order| %>
+    <div class="col-sm">
+        <h2 class="order-id"># <%= order.id %>:</h2>
+            <%= link_to order.product.name, order, class: "order" %>
+        
+        <p class="price"><%= order.product.description %></p>
+        <p class="price"><%= order.product.price %> €</p>
+    </div><!-- /col -->
+    <% end %>
+</div>

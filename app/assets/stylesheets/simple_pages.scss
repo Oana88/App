@@ -1,0 +1,169 @@
+//General CSS//
+
+//* {border:2px solid red}//
+
+html {
+    min-height:100%;
+}
+
+body {
+    background-color:#eaeaea;
+    min-height:100%;
+    width:100%;
+}
+
+
+.navbar-brand {
+    font-family:Niramit, TimesNewRoman, serif;
+    color:white !important;
+    font-weight:bold;
+    font-size:25px;
+}
+
+.nav-item {
+    font-family:Niramit, TimesNewRoman, serif;
+    color:white;
+    font-weight:bold;
+    font-size:20px;
+    text-decoration: none;
+}
+
+.nav-item :hover {
+    color:white;
+    text-decoration:none;
+}
+
+.btn {
+    margin-left:15px;
+    float:right;
+}
+
+a {
+    color:black;
+    padding-left:15px;
+}
+
+a:hover {
+    color:black;
+}
+
+h1 {
+    font-family:Niramit, TimesNewRoman, serif;
+    color:blue;
+    text-align:center;
+    padding-top:50px
+}
+
+h2 {
+    font-family:Niramit, TimesNewRoman, serif;
+    font-size:20px;
+    color:black;
+    text-align:center;
+}
+
+.owl-nav {
+    text-align:center;
+    font-size:2em;
+    font-weight:bolder;
+    zoom:200%;
+}
+
+.row {
+    margin-left:0;
+    margin-right:0;
+}
+
+.image {
+    width: 100%;
+    vertical-align:middle;
+    padding-left:20px;
+    padding-top:30px;
+}
+
+footer {
+    display:block;
+    position: fixed;
+    height:20px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: lightgrey;
+    color: black;
+    text-align: center;
+    font-family:Niramit, TimesNewRoman, serif;
+    font-weight:bold;
+    font-size:15px;
+}
+
+//Page specific CSS//
+
+//Featured Products page//
+
+img {
+    width:100%;
+}
+
+.container {
+    padding-top:50px;
+}
+
+
+//Contact page//
+
+.motto {
+    text-align:center;
+    font-family:Niramit, TimesNewRoman, serif;
+    font-size:2em;
+    font-style:italic;
+    margin-top:40px;
+}
+
+.contact-text {
+    text-align:left;
+    font-family:Niramit, TimesNewRoman, serif;
+    font-size:1.5em;
+    margin-top:40px;
+    margin-left:40px;
+}
+
+.address {
+    text-align:left;
+    font-family:Niramit,TimesNewRoman, serif;
+    font-size:1.5em;
+    font-weight:600;
+    margin-left:40px;
+}
+.form-group {
+    width:100%;
+    margin-left:40px;
+    margin-right:40px;
+}
+
+.message-box {
+    width:100%;
+    font-size:1rem;
+}
+
+label {
+    font-family:Niramit, TimesNewRoman, serif;
+    font-size:1.5em;
+    font-weight:600;
+}
+
+.btn {
+    font-family:Niramit, TimesNewRoman, serif;
+    font-size:1.5em;
+    font-weight:600;
+    margin-left:40px;
+    margin-top:0;
+}
+
+.contact-button {
+    padding-bottom:30px;
+}
+
+//Registration pages //
+
+.login {
+    float: none;
+}

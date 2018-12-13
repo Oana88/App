@@ -1,0 +1,39 @@
+<h1>How to contact us</h1><br>
+<p class="motto">Only high quality bikes are sold.</p><br>
+
+<p class="contact-text">You can reach us at the following contact details. We will be happy to answer all of your questions.</p><br>
+
+<p class="address">Address goes here.</p>
+<p class="address">Phone number goes here.</p>
+<p class="address">Email goes here.</p>
+
+<p class="contact-text">Or you can use the below contact form in order to send us an e-mail.</p><br>
+
+<%= flash[:notice] %>
+
+<%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
+<div class="row">
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
+  </div>
+  <br>
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+  </div>
+  <br>
+  <div class="form-group">
+    <%= form.label :message %>
+    <%= form.text_area :message, class: "form-control", placeholder: "Enter Message", rows: 5 %>
+  </div>
+  <br>
+  <div class="contact-button">
+    <%= form.submit "Send", class: "btn btn-success btn-sm submit" %>
+    <% end %>
+  </div>
+</div>
+
+
+
+

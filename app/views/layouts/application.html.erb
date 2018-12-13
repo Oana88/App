@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <%= stylesheet_link_tag    'application', "https://fonts.googleapis.com/css?family=Niramit", media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-secondary sticky-top" role="navigation" id="navbar-example">
+      <a class="navbar-brand" href="#">Bikes for All</a>
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <%= form_with(url: products_path, method: 'get', local: true, class: "form-inline") do |form| %>
+      <%= form.text_field :q, id: 'q', value: params[:q], size: 10, class: "form-control", placeholder: "Search" %>
+      <%= form.submit 'Search', class: "btn btn-success btn-sm" %>
+      <% end %>
+
+      <nav class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><%= link_to "Home", root_path %></li>
+          <li class="nav-item"><%= link_to "About", simple_pages_about_path %></li>
+          <li class="nav-item"><%= link_to "Featured Products", simple_pages_landing_page_path %></li>
+          <li class="nav-item"><%= link_to "Products", products_path %></li>
+          <li class="nav-item"><%= link_to "Orders", orders_path %></li>
+          <li class="nav-item"><%= link_to "Contact", simple_pages_contact_path %></li>
+          <% if signed_in? && current_user.admin? %>
+          <li class="nav-item"><%= link_to "Users", users_path %></li>
+          <% end %>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "nav-item") %>
+          </li>
+          <% else %>
+          <li class="nav-item">
+            <%= link_to('Sign up', new_user_registration_path, class: "nav-item") %>
+            <%= link_to('Login', new_user_session_path, class: "nav-item") %>
+          </li>
+          <% end %>
+        </li>
+      </ul>
+    </nav>
+  </nav> <!-- end navbar-->
+
+
+<% if notice %>
+<p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+<p class="alert alert-danger"><%= alert %></p>
+<% end %>
+
+
+
+    <%= yield %>
+
+    <footer>
+      &copy; 2018 Ioana Urse All rights reserved
+    </footer>
+    
+  </body>
+</html>

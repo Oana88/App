@@ -1,0 +1,10 @@
+<h1>Editing Product</h1>
+
+<div class="container-new-product">
+<%= render 'form', product: @product %>
+</div>
+
+<div class="container-editing-links">
+<%= link_to 'Show', @product, class: "btn btn-outline-dark btn-sm" %> |
+<%= link_to 'Back', products_path, class: "btn btn-outline-dark btn-sm" %>
+</div>
