@@ -3,13 +3,16 @@ class Ability
 
 
   def initialize(user)
-    can :read, :all # permissions for every user, even if not logged in 
-    if
-        user ||= User.new #guest user (not logged in)
-        can :manage, User, id: user.id
-    else
-        user.admin?
-        can :manage, :all 
+    if user.nil?
+    user ||= User.new #guest user (not logged in) 
+    elsif user.admin?
+      can :manage, :all
+    else 
+      can :manage, User, id: user.id
+      can :manage, Comment.where(user_id: user.id) do |comment|
+        comment.user_id == user.id
+      end
+
     end
    end
 

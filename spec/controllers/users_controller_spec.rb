@@ -6,8 +6,8 @@ describe UsersController, type: :controller do
   #let(:user_second) {User.create!(email:"test@test.com", password:"password", password_confirmation: "password" )}
 
   before do
-    @user = FactoryBot.build(:user)
-    @user2 = FactoryBot.build(:user)
+    @user = FactoryBot.create(:user)
+    @user2 = FactoryBot.create(:user)
   end
 
   describe 'GET #show' do
@@ -33,7 +33,7 @@ describe UsersController, type: :controller do
     context "when a user is not logged in" do
       it "redirects to login" do
         get :show, params: {id: @user.id}
-        expect(response).to redirect_to(new_user_session_path)
+        expect(response).to redirect_to(root_path)
       end
     end
   end
