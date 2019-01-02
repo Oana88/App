@@ -78,4 +78,7 @@ gem 'rails-controller-testing'
 
 gem 'stripe'
 
+# Brakeman for security flaws
+gem "brakeman"
+
 
