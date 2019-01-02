@@ -81,4 +81,7 @@ gem 'stripe'
 # Brakeman for security flaws
 gem "brakeman"
 
+# MemCachier
+gem 'dalli'
+
 

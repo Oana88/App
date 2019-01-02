@@ -1,3 +1,4 @@
+<% cache product do %>
 <div class="col-sm">
     <%= link_to product do %>
     <%= image_tag(product.image_url, class: "img-fluid") %>
@@ -6,3 +7,4 @@
     <p><%= product.description %></p>
     <p><%= product.price %>€</p>
 </div>
+<% end %>
