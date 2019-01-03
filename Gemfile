@@ -84,4 +84,7 @@ gem "brakeman"
 # MemCachier
 gem 'dalli'
 
+# Redis for performance
+gem 'redis-rails'
+
 
