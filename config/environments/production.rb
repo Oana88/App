@@ -102,6 +102,10 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-config.action_mailer.default_url_options = { host: 'bikes-for-all.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'bikes-for-all.herokuapp.com' }
+
+  config.web_socket_server_url = "wss://bikes-for-all.herokuapp.com/cable"
+
+  config.action_cable.allowed_request_origins = ['https://bikes-for-all.herokuapp.com', 'https://bikes-for-all.herokuapp.com']
 
 end
