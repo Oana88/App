@@ -24,8 +24,8 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <%= form_with(url: products_path, method: 'get', local: true, class: "form-inline") do |form| %>
-      <%= form.text_field :q, id: 'q', value: params[:q], size: 10, class: "form-control", placeholder: "Search" %>
-      <%= form.submit 'Search', class: "btn btn-success btn-sm" %>
+      <%= form.text_field :q, id: 'q', value: params[:q], size: 30, class: "form-control", placeholder: "Search" %>
+      <%= form.submit 'Search' %>
       <% end %>
 
       <nav class="collapse navbar-collapse" id="navbarSupportedContent">
