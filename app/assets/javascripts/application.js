@@ -22,6 +22,11 @@ document.addEventListener("turbolinks:load", function() {
    $(".owl-carousel").owlCarousel({
     margin:10,
     loop:true,
-    nav:true
+    center:true,
+    autoplay:true,
+    autoWidth:false,
+    dots:true,
+    dotsEach:true,
+    slideSpeed : 500,
    });
 });

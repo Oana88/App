@@ -18,6 +18,11 @@
 .price {
     font-size:1.5em;
     text-align:center;
+    margin-top:25px;
+}
+
+#order-details{
+    margin-bottom:50px;
 }
 
 //Show //
@@ -30,6 +35,11 @@
 .order-title {
     font-size:2.5rem;
     margin-bottom:50px;
+    margin-top:80px;
+}
+
+#order-img{
+    width:50%;
 }
 
 .order-info {
@@ -37,4 +47,8 @@
     display:flow-root;
     padding-top:20px;
     padding-bottom:20px;
+}
+
+.btn-order{
+    margin-bottom:100px;
 }

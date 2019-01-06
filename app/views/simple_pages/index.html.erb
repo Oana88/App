@@ -1,9 +1,45 @@
+
 <h1>Welcome to Bikes for All</h1>
 <h2>Your source for Bikes everywhere</h2>
 
-<div class="owl-carousel">
+<div class="owl-carousel owl-theme">
     <div><%= image_tag("bike5.jpg", class:"img-responsive image") %></div>
     <div><%= image_tag("bike12.jpg", class:"img-responsive image") %></div>
     <div><%= image_tag("bike13.jpg", class:"img-responsive image") %></div>
     <div><%= image_tag("bike14.jpg", class:"img-responsive image") %></div>
 </div>
+
+
+<h1 class="week-title">This week's products</h1>
+
+<div class="container-fluid" id="weekly-products">
+  <div class="row justify-content-center">
+    <div class="col-sm-6 col-md-3 col-lg-3" id="product-no">
+      <%= image_tag("sample.jpg", class:"img-responsive image") %>
+      <p class="weekly-product-name">Bike 5</p>
+      <p class="weekly-product-price">50.0€</p>
+      <p class="weekly-products-details"><%= link_to "View Details", class: "nav-links" %>
+      </div>
+    <div class="col-sm-6 col-md-3 col-lg-3" id="product-no">
+      <%= image_tag("sample1.jpg", class:"img-responsive image") %>
+      <p class="weekly-product-name">Bike 6</p>
+      <p class="weekly-product-price">40.0€</p>
+      <p class="weekly-products-details"><%= link_to "View Details", products_url, class: "nav-links" %>
+    </div>
+    <div class="col-sm-6 col-md-3 col-lg-3" id="product-no">
+      <%= image_tag("sample2.jpg", class:"img-responsive image") %>
+      <p class="weekly-product-name">Bike 7</p>
+      <p class="weekly-product-price">60.0€</p>
+      <p class="weekly-products-details"><%= link_to "View Details", products_url, class: "nav-links" %>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+

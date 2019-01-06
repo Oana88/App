@@ -1,4 +1,20 @@
+//* {border:1px solid red}//
 
+#products-list{
+    width:80%;
+    padding:0;
+    margin-top:40px;
+}
+
+#product-order{
+    margin-top:70px;
+}
+
+#product-details{
+    border:2px solid black;
+    border-radius:30px;
+    margin:10px;
+}
 
 
 .col-sm {
@@ -39,8 +55,19 @@ h4 {
     font-size:2em;
 }
 
+#comments-box{
+    border:1px solid black;
+    border-radius:30px;
+    width:70%;
+    height:150px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
 .rating {
     text-align:center;
+    margin-top:20px;
 }
 
 .rating > img {
@@ -52,7 +79,9 @@ h4 {
 }
 
 .row-reviews {
-    display:inline-block;
+    display:list-items;
+    max-width:30%;
+    margin-bottom:30px;
 }
 
 .saved > img {
@@ -82,6 +111,3 @@ h4 {
     text-align:center;
     margin-top:40px;
 }
-
-
-

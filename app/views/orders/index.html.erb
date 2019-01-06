@@ -1,6 +1,7 @@
 <h1>Orders</h1>
 
-<div class="row">
+<div class="container" id="order-details">
+<div class="row justify-content-center">
     <% @orders.each do |order| %>
     <div class="col-sm">
         <h2 class="order-id"># <%= order.id %>:</h2>
@@ -11,4 +12,5 @@
         <p class="price"><%= order.product.price %>€</p>
     </div><!-- /col -->
     <% end %>
+</div>
 </div>

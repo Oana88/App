@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>App</title>
+    <title>App-this is a test</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
@@ -17,44 +17,51 @@
   </head>
 
   <body>
-
-    <nav class="navbar navbar-expand-md navbar-dark bg-secondary sticky-top" role="navigation" id="navbar-example">
-      <a class="navbar-brand" href="#">Bikes for All</a>
-      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <%= form_with(url: products_path, method: 'get', local: true, class: "form-inline") do |form| %>
-      <%= form.text_field :q, id: 'q', value: params[:q], size: 30, class: "form-control", placeholder: "Search" %>
-      <%= form.submit 'Search' %>
-      <% end %>
-
-      <nav class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active"><%= link_to "Home", root_path %></li>
-          <li class="nav-item"><%= link_to "About", simple_pages_about_path %></li>
-          <li class="nav-item"><%= link_to "Featured Products", simple_pages_landing_page_path %></li>
-          <li class="nav-item"><%= link_to "Products", products_path %></li>
-          <li class="nav-item"><%= link_to "Orders", orders_path %></li>
-          <li class="nav-item"><%= link_to "Contact", simple_pages_contact_path %></li>
-          <% if signed_in? && current_user.admin? %>
-          <li class="nav-item"><%= link_to "Users", users_path %></li>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+      <div class="container-fluid" id="container-left">
+        <div class="navbar-header">
+          <div class="navbar-brand">Bikes for All</div>
+        </div>
+        <ul class="nav navbar-nav navbar-left">
+          <%= form_with(url: products_path, method: 'get', local: true, class: "form-inline") do |form| %>
+          <%= form.text_field :q, id: 'q', value: params[:q], size: 30, class: "form-control mr-sm-2", placeholder: "Search" %>
+          <%= form.submit 'Search', id:'q' %>
           <% end %>
         </ul>
-        <ul class="navbar-nav ml-auto">
-          <% if user_signed_in? %>
-          <li class="nav-item">
-            <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "nav-item") %>
-          </li>
-          <% else %>
-          <li class="nav-item">
-            <%= link_to('Sign up', new_user_registration_path, class: "nav-item") %>
-            <%= link_to('Login', new_user_session_path, class: "nav-item") %>
-          </li>
-          <% end %>
-        </li>
-      </ul>
-    </nav>
-  </nav> <!-- end navbar-->
+      </div><!--end container-fluid-->
+
+      <nav class="nav_global-navigation">
+        <div class="container-fluid" id="container-right">
+          <div class="row">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav navbar-right">
+                <li class="col-sm-4 col-md-3 col-lg-2"><%= link_to "Home", root_path, class: "nav-links" %></li>
+                <li class="col-sm-4 col-md-3 col-lg-2"><%= link_to "About", simple_pages_about_path, class: "nav-links" %></li>
+                <li class="col-sm-4 col-md-3 col-lg-2"><%= link_to "Products", products_path, class: "nav-links" %></li>
+                <li class="col-sm-4 col-md-3 col-lg-2"><%= link_to "Orders", orders_path, class: "nav-links" %></li>
+                <li class="col-sm-4 col-md-3 col-lg-2"><%= link_to "Contact", simple_pages_contact_path, class: "nav-links" %></li>
+                <% if signed_in? && current_user.admin? %>
+                <li class="col-sm-4 col-md-3 col-lg-2"><%= link_to "Users", users_path, class: "nav-links" %></li>
+                <li class="col-sm-4 col-md-3 col-lg-2"><%= link_to('Logout', destroy_user_session_path, method: :delete, class: "nav-links") %></li>
+                <% elsif signed_in? %>
+                <li class="col-sm-4 col-md-3 col-lg-2"><%= link_to('Logout', destroy_user_session_path, method: :delete, class: "nav-links") %></li>
+                <% else %>
+                <li class="col-sm-4 col-md-3 col-lg-2">
+                  <%= link_to('Sign up', new_user_registration_path, class: "nav-links") %> |
+                  <%= link_to('Login', new_user_session_path, class: "nav-links") %>
+                </li>
+                <% end %>
+              </ul>
+            </div>
+          </div><!--end row-->
+        </div><!--end container-->
+      </nav>
+    </nav><!--end navbar-->
+
+    
 
 
 <% if notice %>
@@ -68,8 +75,14 @@
 
     <%= yield %>
 
-    <footer>
-      &copy; 2018 Ioana Urse All rights reserved
+    <footer class="footer fixed-bottom">
+      <div class="container-footer">
+        <div class="row-footer">
+          <div class="rights">&copy; 2018 Ioana Urse All rights reserved</div>
+          <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fcareerfoundry%2F&width=121&layout=button&action=like&size=large&show_faces=false&share=true&height=65&appId" width="120" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" id="facebook"></iframe>
+          <a href="https://twitter.com/careerfoundry?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      </div>
     </footer>
     
   </body>

@@ -2,8 +2,8 @@
 
 <h1>Products</h1>
 
-<div class="container-fluid">
-    <div class="row">
+<div class="container-fluid" id="products-list">
+    <div class="row justify-content-center">
       <% cache(cache_key_for_products) do %>
         <% @products.each do |product| %>
         <%= render product %>

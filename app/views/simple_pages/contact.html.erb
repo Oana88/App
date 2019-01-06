@@ -12,7 +12,8 @@
 <%= flash[:notice] %>
 
 <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
-<div class="row">
+
+<div class="row" id="form-contact">
   <div class="form-group">
     <%= form.label :name %>
     <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
@@ -29,10 +30,11 @@
   </div>
   <br>
   <div class="contact-button">
-    <%= form.submit "Send", class: "btn btn-success btn-sm submit" %>
+    <%= form.submit "Send", class:"btn btn-outline-dark", id:"btn-contact" %>
     <% end %>
   </div>
 </div>
+
 
 
 
