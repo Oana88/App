@@ -8,6 +8,12 @@
 
 #product-order{
     margin-top:70px;
+    width:100%
+}
+
+#product-description{
+    margin-top:100px;
+    padding-left:40px;
 }
 
 #product-details{
@@ -40,6 +46,8 @@ p {
 
 .rated {
     text-align:center;
+    adding-top:20px;
+    padding-bottom:10px;
 }
 
 .rated > img {
@@ -78,14 +86,22 @@ h4 {
     text-align:center;
 }
 
-.row-reviews {
-    display:list-items;
-    max-width:30%;
-    margin-bottom:30px;
+#reviews{
+    margin:auto;
+    padding-top:40px;
+    padding-bottom:40px;
+    display:inline-grid;
 }
 
+.reviews{
+    font-size:25px;
+    padding-top:20px;
+    padding-bottom:10px;
+}
+
+
 .saved > img {
-    width:8%;
+    width:15%;
 }
 
  a>.btn destroy {

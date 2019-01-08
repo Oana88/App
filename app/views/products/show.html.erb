@@ -1,42 +1,27 @@
 <!--<p id="notice"><%#= notice %></p>-->
 
-<div class="row" id="product-order" data-product-id="<%= @product.id %>">
-  <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-    <% cache @product do %>
-    <%= image_tag(@product.image_url, class: "img-thumbnail mx-auto d-block img-zoom", data_zoom_image: "@product.product_image.url") %>
-  </div>
-  <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-    <p>
-      <strong><%= @product.name %></strong>
-    </p>
-
-    <p>
-      <strong><%= @product.description %></strong>
-    </p>
-    <% end %>
-
-    <p>
-      <strong>Colour:</strong>
-      <%= @product.colour %>
-    </p>
-
-    <p>
-      <strong>Price: <%= number_to_currency(@product.price, :unit => "€") %></strong>
-    </p>
-
-    <p>Average Rating: <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div></p>
-
-    <p>
-      <%= form_with(url: '/payments/create') do |form| %>
-        <%= render partial: "shared/stripe_checkout_button" %>
-      <% end %>
-    </p>
-
-  </div>
-
-  <% if @product.comments.length > 0 %>
-  <%#= @product.highest_rating_comment.body %>
+<div class="row justify-content-center" id="product-order" data-product-id="<%= @product.id %>">
+  <% cache @product do %>
+    <div class="col-12 col-sm-12 col-md-6 col-lg-6" id="product-description">
+      <%= image_tag(@product.image_url, class: "img-thumbnail mx-auto d-block img-zoom", data_zoom_image: "@product.product_image.url") %>
+    </div>
+    <div class="col-12 col-sm-12 col-md-6 col-lg-6" id="product-description">
+      <p><strong><%= @product.name %></strong></p>
+      <p><strong><%= @product.description %></strong></p>
+      <p><strong>Colour: <%= @product.colour %></strong></p>
+      <p><strong>Price: <%= number_to_currency(@product.price, :unit => "€") %></strong></p>
   <% end %>
+      <p>Average Rating: <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div></p>
+      <p>
+        <%= form_with(url: '/payments/create') do |form| %>
+        <%= render partial: "shared/stripe_checkout_button" %>
+        <% end %>
+      </p>
+    </div>
+
+    <% if @product.comments.length > 0 %>
+    <%#= @product.highest_rating_comment.body %>
+    <% end %>
 </div>
 
 

@@ -87,4 +87,7 @@ gem 'dalli'
 # Redis for performance
 gem 'redis-rails'
 
+#Test helper
+gem 'simplecov', require: false, group: :test
+
 
